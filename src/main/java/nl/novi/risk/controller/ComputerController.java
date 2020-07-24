@@ -1,11 +1,13 @@
 package nl.novi.risk.controller;
 
 import nl.novi.risk.domain.Computer;
+import nl.novi.risk.service.ComputerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -16,33 +18,24 @@ public class ComputerController {
     private ComputerService computerService;
 
     @GetMapping(value = "/api/computer", produces = MediaType.APPLICATION_JSON_VALUE)
-        return listComputer;
+    public List<Computer> getAllComputers() {
+        List<Computer> computersFromDatabase = computerService.getComputers();
+        return computersFromDatabase;
     }
 
     @GetMapping(value = "/api/computer/{id}")
     public Computer getComputerById(@PathVariable int id) {
-        Optional<Computer> computer = computerRepository.findById(id);
-        if(computer.isPresent()) {
-            return computer.get();
-        } else {
-            return null;
-        }
+        return computerService.getComputerById(id);
     }
 
     @PostMapping("/api/computer")
     public Computer createComputer(@Valid @RequestBody Computer computer) {
-        return computerRepository.save(computer);
+        return computerService.createComputer(computer);
     }
 
     @DeleteMapping("/api/computer/{id}")
-    public Map<String, Boolean> deleteComputer(@PathVariable(value = "id") Long computerId)
-            throws ResourceNotFoundException {
-        Computer computer = computerRepository.findById(Math.toIntExact(computerId))
-                .orElseThrow(() -> new ResourceNotFoundException("Computer not found for this id :: " + computerId));
-        computerRepository.delete(computer);
-        Map<String, Boolean> response = new HashMap<>();
-        response.put("deleted", Boolean.TRUE);
-        return response;
+    public String deleteComputer(@PathVariable(value = "id") int computerId) {
+        return computerService.deleteComputer(computerId);
     }
 
     @PutMapping("/api/computer/{id}")

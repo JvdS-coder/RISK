@@ -7,9 +7,9 @@ import java.util.Date;
 
 @Entity
 public class Computer {
+
     @Id
     @GeneratedValue
-
     // attributen
     private int pcnr;
     private String merk;
