@@ -1,5 +1,6 @@
 package nl.novi.risk.service;
 
+import nl.novi.risk.controller.ResourceNotFoundException;
 import nl.novi.risk.domain.Computer;
 import nl.novi.risk.repository.ComputerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +20,12 @@ public class ComputerService  {
         return listComputers;
     }
 
-    public Computer getComputerById(int id) {
-        Optional<Computer> computer = computerRepository.findById(id);
+    public Computer getComputerById(int computerId) {
+        Optional<Computer> computer = computerRepository.findById(computerId);
         if(computer.isPresent()) {
             return computer.get();
         } else {
-            //TODO Wat als er geen computer gevonden kan worden?
-            return null;
+            return new ResourceNotFoundException("Computer bestaat niet met dit id: " + computerId);
         }
     }
 
@@ -40,8 +40,7 @@ public class ComputerService  {
             computerRepository.deleteById(computerId);
             return "Computer met id " + computerId + " is verwijderd.";
         }
-        //TODO Exceptie
-        return "Computer met id bestaat niet.";
+        return new String("Computer met id " + computerId + " bestaat niet of is reeds verwijderd.");
     }
 
 
