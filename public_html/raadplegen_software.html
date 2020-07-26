@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+    Created on : 30-jun-2020, 12:02:22
+    Author     : Johan van der Slik
+-->
+<html class="supernova">
+<head>
+    <title>RISK version 1.0</title>
+    <meta name="Description"
+          content="This index.html page is a webapplication for storing software, hardware and issue knowledgebase">
+    <meta name="Copyright" content="Copyright 2020 by J. G. van der Slik">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/risk.css">
+    <link rel="stylesheet" type="text/css" href="css/nav_menu.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+<header>
+    <a href='index.html'>
+        <div><h1>Registratie Informatie Systemen & Knowledgebase</h1></div>
+    </a>
+</header>
+    
+<nav>
+    <div>
+        <center>
+          <nav class="menu">
+		  <ol>
+		    <li class="menu-item">
+		      <a href="#0">Toevoegen</a>
+		      <ol class="sub-menu">
+			<li class="menu-item"><a href="toevoegen_computer.html">Computers</a></li>
+			<li class="menu-item"><a href="toevoegen_randapparatuur.html">Randapparatuur</a></li>
+                        <li class="menu-item"><a href="toevoegen_software.html">Software</a></li>
+                        <li class="menu-item"><a href="toevoegen_leverancier.html">Leverancier</a></li>
+                        <li class="menu-item"><a href="toevoegen_storingen.html">Storingen</a></li>
+                        <li class="menu-item"><a href="toevoegen_knowledgebase.html">Knowledgebase</a></li>
+		      </ol>
+		    </li>
+		    <li class="menu-item">
+		      <a href="#0">Raadplegen</a>
+		      <ol class="sub-menu">
+			<li class="menu-item"><a href="raadplegen_computer.html">Computers</a></li>
+			<li class="menu-item"><a href="raadplegen_randapparatuur.html">Randapparatuur</a></li>
+                        <!-- <li class="menu-item"><a href="raadplegen_software.html">Software</a></li> -->
+                        <li class="menu-item"><a href="raadplegen_leverancier.html">Leverancier</a></li>
+                        <li class="menu-item"><a href="raadplegen_storingen.html">Storingen</a></li>
+                        <li class="menu-item"><a href="raadplegen_knowledgebase.html">Knowledgebase</a></li>
+		    </ol>
+                    </li>
+		    <li class="menu-item">
+		      <a href="#0">Wijzigen</a>
+		      <ol class="sub-menu">
+			<li class="menu-item"><a href="wijzigen_computer.html">Computers</a></li>
+			<li class="menu-item"><a href="wijzigen_randapparatuur.html">Randapparatuur</a></li>
+                        <li class="menu-item"><a href="wijzigen_software.html">Software</a></li>
+                        <li class="menu-item"><a href="wijzigen_leverancier.html">Leverancier</a></li>
+                        <li class="menu-item"><a href="wijzigen_storingen.html">Storingen</a></li>
+                        <li class="menu-item"><a href="wijzigen_knowledgebase.html">Knowledgebase</a></li>
+		      </ol>
+                    </li>
+		    <li class="menu-item">
+		       <a href="#0">Verwijderen</a>
+		      <ol class="sub-menu">
+			<li class="menu-item"><a href="verwijderen_computer.html">Computers</a></li>
+			<li class="menu-item"><a href="verwijderen_randapparatuur.html">Randapparatuur</a></li>
+                        <li class="menu-item"><a href="verwijderen_software.html">Software</a></li>
+                        <li class="menu-item"><a href="verwijderen_leverancier.html">Leverancier</a></li>
+                        <li class="menu-item"><a href="verwijderen_storingen.html">Storingen</a></li>
+                        <li class="menu-item"><a href="verwijderen_knowledgebase.html">Knowledgebase</a></li>
+	          </ol>
+                    </li>
+		    <li class="menu-item"><a href="overzichten.html">Statistics</a></li>
+		    <li class="menu-item"><a href="over_RISK.html">Over RISK</a></li>
+		  </ol>
+	    </nav> 
+        </center>
+    </div>
+</nav>
+<section>
+
+  <center>
+    <blockquote>
+      <div class="container">
+        <form action="action_page.php">
+          <h1>Raadplegen gegevens software applicaties</h1>
+          <center>
+            <table>
+              <tr>
+                  <td><label for="Swnr"><b>SW-Nummer</b></label></td>
+                  <td><input type="number" name="swnr" align=right id="swnr" size="10" required></td>
+                  <td><button type="submit" value="Submit"><b>Zoek recordgegevens Software</b></button></td>
+              </tr>
+              </table>
+              <hr>
+              <table>
+              <tr>
+                <td><label for="naam"><b>Naam applicatie</b></label></td>
+                <td><input type="text" name="naam" align=left id="naam" size="60" readonly></td>
+                <td><label for="heldesksupport"><b>Helpdesk support</b></label></td>
+                <td><input type="text" name="helpdesksupport"  align=left id="helpdesksupport" size="30" readonly></td>
+             </tr>
+                <td><label for="versie"><b>Versie applicatie</b></label></td>
+                <td><input type="text" name="verie" align=left id="versie" size="30" required></td>
+                <td><label for="licentienummer"><b>Licentienummer</b></label></td>
+                <td><input type="text" name="licentienummer" align=left id="licentienummer" size="30" readonly></td>
+              </tr>
+              <tr>
+                <td><label for="levnr"><b>Leverancier nummer</b></label></td>
+                <td><input type="text" name="levnr" align=left id="levnr" size="10" readonly></td>
+                <td><label for="licentieaantal"><b>Licentie aantal</b></label></td>
+                <td><input type="text" name="licentieaantal" align=left id="licentieaantal" size="30" readonly></td>
+              </tr>
+              <tr>
+                 <td><label for="klantnummer"><b>Klantnummer</b></label></td>
+                 <td><input type="text" name="klantnummer" align=left id="klantnummer" size="50" readonly></td>
+                 <td><label for="expiratiedatum"><b>Afloopdatum</b></label></td>
+                 <td><input type="date" name="expiratiedatum" align=left id="expiratiedatum" size="30" readonly></td>
+              </tr>
+            </table>
+            <hr>
+            <table>
+                <tr>
+                    <td><label for="typeos"><b>Vereist operating system</b></label></td>
+                    <td><input type="text" name="typeos" align=left id="typeos" size="20" readonly></td>
+                    <td><label for="minopslaggroote"><b>Minimale opslagruimte</b></label></td>
+                    <td><input type="text" name="minopslaggroote" align=left id="minopslaggroote" size="20" readonly></td>
+                </tr>
+                <tr>
+                    <td><label for="minramgeheugen"><b>Minimaal ram geheugen</b></label></td>
+                    <td><input type="text" name="minramgeheugen" align=left id="minramgeheugen" size="20" readonly></td>
+                    <td><label for="minvideogeheugen"><b>Minimaal video geheugen</b></label></td>
+                    <td><input type="text" name="minvideogeheugen" align=left id="minvideogeheugen" size="20" readonly></td>
+                </tr>
+            </table>
+ 
+          </center>
+        </form>
+      </div>
+    </blockquote>
+  </center>
+
+</section>
+    
+    <!-- <label for="Typepsw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <hr>
+
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+  -->
+
+
+<footer>
+    Copyright &copy 2020 by J. G. van der Slik, Maarheeze
+</footer>
+</body>
+</html>
+

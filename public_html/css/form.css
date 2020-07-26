@@ -1,0 +1,33 @@
+/* 
+    Created on : 30-jun-2020, 12:02:22
+    Author     : Johan van der Slik
+*/
+
+form {
+    /* opmaak formulieren */
+    font-family: verdana;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 0% 2% 2% 2%;
+}
+
+table {
+    border-collapse: collapse; 
+    border: 1px solid #C0C0C0; 
+    display: inline-table;
+}
+
+td    { 
+    border: 1px solid #C0C0C0; 
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 260px; 
+    height: 0px;
+    text-align: right;
+}

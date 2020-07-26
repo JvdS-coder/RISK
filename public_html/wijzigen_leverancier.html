@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+    Created on : 30-jun-2020, 12:02:22
+    Author     : Johan van der Slik
+-->
+<html class="supernova">
+<head>
+    <title>RISK version 1.0</title>
+    <meta name="Description"
+          content="This index.html page is a webapplication for storing software, hardware and issue knowledgebase">
+    <meta name="Copyright" content="Copyright 2020 by J. G. van der Slik">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/risk.css">
+    <link rel="stylesheet" type="text/css" href="css/nav_menu.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+<header>
+    <a href='index.html'>
+        <div><h1>Registratie Informatie Systemen & Knowledgebase</h1></div>
+    </a>
+</header>
+    
+<nav>
+    <div>
+        <center>
+           
+	  <nav class="menu">
+		  <ol>
+		    <li class="menu-item">
+		      <a href="#0">Toevoegen</a>
+		      <ol class="sub-menu">
+			<li class="menu-item"><a href="toevoegen_computer.html">Computers</a></li>
+                        <li class="menu-item"><a href="toevoegen_randapparatuur.html">Randapparatuur</a></li>
+                        <li class="menu-item"><a href="toevoegen_software.html">Software</a></li>
+                        <li class="menu-item"><a href="toevoegen_leverancier.html">Leverancier</a></li>
+                        <li class="menu-item"><a href="toevoegen_storingen.html">Storingen</a></li>
+                        <li class="menu-item"><a href="toevoegen_knowledgebase.html">Knowledgebase</a></li>
+		      </ol>
+		    </li>
+		    <li class="menu-item">
+		      <a href="#0">Raadplegen</a>
+		      <ol class="sub-menu">
+			<li class="menu-item"><a href="raadplegen_computer.html">Computers</a></li>
+                        <li class="menu-item"><a href="raadplegen_randapparatuur.html">Randapparatuur</a></li>
+                        <li class="menu-item"><a href="raadplegen_software.html">Software</a></li>
+                        <li class="menu-item"><a href="raadplegen_leverancier.html">Leverancier</a></li>
+                        <li class="menu-item"><a href="raadplegen_storingen.html">Storingen</a></li>
+                        <li class="menu-item"><a href="raadplegen_knowledgebase.html">Knowledgebase</a></li>
+                    </ol>
+                    </li>
+		    <li class="menu-item">
+		      <a href="#0">Wijzigen</a>
+		      <ol class="sub-menu">
+			<li class="menu-item"><a href="wijzigen_computer.html">Computers</a></li>
+                        <li class="menu-item"><a href="wijzigen_randapparatuur.html">Randapparatuur</a></li>
+                        <li class="menu-item"><a href="wijzigen_software.html">Software</a></li>
+                        <!-- <li class="menu-item"><a href="wijzigen_leverancier.html">Leverancier</a></li> -->
+                        <li class="menu-item"><a href="wijzigen_storingen.html">Storingen</a></li>
+                        <li class="menu-item"><a href="wijzigen_knowledgebase.html">Knowledgebase</a></li>
+		      </ol>
+                    </li>
+		    <li class="menu-item">
+		       <a href="#0">Verwijderen</a>
+		      <ol class="sub-menu">
+			<li class="menu-item"><a href="verwijderen_computer.html">Computers</a></li>
+                        <li class="menu-item"><a href="verwijderen_randapparatuur.html">Randapparatuur</a></li>
+                        <li class="menu-item"><a href="verwijderen_software.html">Software</a></li>
+                        <li class="menu-item"><a href="verwijderen_leverancier.html">Leverancier</a></li>
+                        <li class="menu-item"><a href="verwijderen_storingen.html">Storingen</a></li>
+                        <li class="menu-item"><a href="verwijderen_knowledgebase.html">Knowledgebase</a></li>
+		      </ol>
+                    </li>
+		    <li class="menu-item"><a href="overzichten.html">Statistics</a></li>
+		    <li class="menu-item"><a href="over_RISK.html">Over RISK</a></li>
+		  </ol>
+	  </nav>
+
+        </center>
+    </div>
+</nav>
+<section>
+
+  <center>
+    <blockquote>
+      <div class="container">
+        <form action="action_page.php">
+          <h1>Wijzigen gegevens leverancier</h1>
+          <center>
+          <table>
+              <tr>
+                  <td><label for="Lenr"><b>Leverancier nummer</b></label></td>
+                  <td><input type="number" name="enr" align=right id="ranr" size="10" readonly></td>
+                  <td><button type="submit" value="Submit"><b>Zoek recordgegevens leverancier</b></button></td>        
+              </tr>
+              </table>
+              <hr>
+              <table>
+              <tr>
+                 <td><label for="Naam"><b>Naam leverancier</b></label></td>
+                 <td><input type="text" name="naamlev" align=right id="naamlev" size="50" required></td>
+              </tr>
+              <tr>
+                 <td><label for="Adres"><b>Adres</b></label></td>
+                 <td><input type="text" name="adreslev" align=right id="adreslev" size="50" required></td>
+              </tr>
+              <tr>
+                 <td><label for="Postcode"><b>Postcode</b></label></td>
+                 <td><input type="text" name="postcodelev" id="Postcodelev" size="30" required></td>
+                 <td><label for="Vestigingsplaats"><b>Vestigingsplaats</b></label></td>
+                 <td><input type="text" name="vestigingsplaatslev" id="vestigingsplaatslev" size="30" required></td>
+              </tr>
+              <tr>
+                 <td><label for="Provincie"><b>Provincie/State</b></label></td>
+                 <td><input type="text" name="provincielev" id="provincie" size="30" required></td>
+                 <td><label for="Land"><b>Land/Country</b></label></td>
+                 <td><input type="text" name="landlev" id="land" size="40" required></td>
+              </tr>
+              <tr>
+                  <td><label for="Telnr_contactpersoon"><b>Telefoonnummer</b></label></td>
+                  <td><input type="tel" name="telnr_contactpersoon" id="telnr_contactpersoon" pattern="[0]{2}-[0-9]{2}-[0]-[0-9]{2}-[0-9]{7}[0-9]" size="20"></td>
+                  <td><label for="email_leverancier"><b>Email leverancier</b></label></td>
+                  <td><input type="email" name="email_leverancier" id="email_leverancier"></td>    
+              </tr>
+          </table>
+
+          </center>
+        </form>
+      </div>
+    </blockquote>
+  </center>
+   
+  <form action="/action_page.php" method="get">
+      <center>
+          <button type="submit" value="Submit"><b>Bewaar aangepaste gegevens</b></button>
+          <button type="reset" value="Reset"><b>Cancel</b></button>
+      </center>
+  </form>
+</section>
+
+<footer>
+    Copyright &copy 2020 by J. G. van der Slik, Maarheeze
+</footer>
+</body>
+</html>
+
