@@ -1,9 +1,8 @@
 package nl.novi.risk.repository;
 
 import nl.novi.risk.domain.Leverancier;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-
-public interface LeverancierRepository extends CrudRepository<Leverancier, Integer> {
+public interface LeverancierRepository extends JpaRepository<Leverancier, Integer> {
 
 }

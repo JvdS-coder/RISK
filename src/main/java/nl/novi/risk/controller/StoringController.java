@@ -1,7 +1,7 @@
 package nl.novi.risk.controller;
 
 import nl.novi.risk.domain.Storingen;
-import nl.novi.risk.repository.StoringenRepository;
+import nl.novi.risk.repository.StoringRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -12,20 +12,20 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-public class StoringenController {
+public class StoringController {
 
     @Autowired
-    private StoringenRepository storingenRepository;
+    private StoringRepository storingRepository;
 
     @GetMapping(value = "/api/storingen", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Storingen> getStoringen() {
-        List<Storingen> listStoringen = (List<Storingen>) storingenRepository.findAll();
+        List<Storingen> listStoringen = (List<Storingen>) storingRepository.findAll();
         return listStoringen;
     }
 
     @GetMapping(value = "/api/storingen/{id}")
     public Storingen getStoringenById(@PathVariable int id) {
-        Optional<Storingen> storingen = storingenRepository.findById(id);
+        Optional<Storingen> storingen = storingRepository.findById(id);
         if(storingen.isPresent()) {
             return storingen.get();
         } else {
@@ -35,15 +35,15 @@ public class StoringenController {
 
     @PostMapping("/api/storingen")
     public Storingen createStoringen(@Valid @RequestBody Storingen storingen) {
-        return storingenRepository.save(storingen);
+        return storingRepository.save(storingen);
     }
 
     @DeleteMapping("/api/storingen/{id}")
     public Map<String, Boolean> deleteStoringen(@PathVariable(value = "id") Long storingenId)
             throws ResourceNotFoundException {
-        Storingen storingen = storingenRepository.findById(Math.toIntExact(storingenId))
+        Storingen storingen = storingRepository.findById(Math.toIntExact(storingenId))
                 .orElseThrow(() -> new ResourceNotFoundException("Storingen not found for this id :: " + storingenId));
-        storingenRepository.delete(storingen);
+        storingRepository.delete(storingen);
         Map<String, Boolean> response = new HashMap<>();
         response.put("deleted", Boolean.TRUE);
         return response;
@@ -52,7 +52,7 @@ public class StoringenController {
     @PutMapping("/api/storingen/{id}")
     public ResponseEntity<Storingen> updateStoringen(@PathVariable(value = "id") Long storingenId,
                                                    @Valid @RequestBody Storingen storingenDetails) throws ResourceNotFoundException {
-        Storingen storingen = storingenRepository.findById(Math.toIntExact(storingenId))
+        Storingen storingen = storingRepository.findById(Math.toIntExact(storingenId))
                 .orElseThrow(() -> new ResourceNotFoundException("Storingen not found for this id :: " + storingenId));
         storingen.setStnr(storingenDetails.getStnr());
         storingen.setPcrndswnr(storingenDetails.getPcrndswnr());
@@ -62,7 +62,7 @@ public class StoringenController {
         storingen.setKostenstoring(storingenDetails.getKostenstoring());
         storingen.setOmschrijvingstoring(storingenDetails.getOmschrijvingstoring());
         storingen.setOmschrijvingoplossing(storingenDetails.getOmschrijvingoplossing());
-        final Storingen updatedStoringen = storingenRepository.save(storingen);
+        final Storingen updatedStoringen = storingRepository.save(storingen);
         return ResponseEntity.ok(updatedStoringen);
     }
 }

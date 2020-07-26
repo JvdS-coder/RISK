@@ -1,9 +1,9 @@
 package nl.novi.risk.controller;
 
 import nl.novi.risk.domain.Computer;
-import nl.novi.risk.service.ComputerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import nl.novi.risk.service.ComputerService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -13,6 +13,8 @@ public class ComputerController {
 
     @Autowired
     private ComputerService computerService;
+    private Object iMessageResolver;
+    public JpaRepository<T, Integer> computerRepository;
 
     @GetMapping(value = "/api/computer", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Computer> getAllComputers() {
@@ -36,10 +38,9 @@ public class ComputerController {
     }
 
     @PutMapping("/api/computer/{id}")
-    public ResponseEntity<Computer> updateComputer(@PathVariable(value = "id") Long computerId,
+    public ResponseEntity<Computer> updateComputer(@PathVariable(value = "id") int computerId,
                                                    @Valid @RequestBody Computer computerDetails) throws ResourceNotFoundException {
-        Computer computer = computerRepository.findById(Math.toIntExact(computerId))
-                .orElseThrow(() -> new ResourceNotFoundException("Computer not found for this id :: " + computerId));
+        Computer computer = computerService.findById(computerId);
         computer.setMerk(computerDetails.getMerk());
         computer.setType(computerDetails.getType());
         computer.setAfdeling(computerDetails.getAfdeling());
