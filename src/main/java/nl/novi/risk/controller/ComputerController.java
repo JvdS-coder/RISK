@@ -1,12 +1,16 @@
 package nl.novi.risk.controller;
 
 import nl.novi.risk.domain.Computer;
+import nl.novi.risk.repository.ComputerRepository;
+import nl.novi.risk.service.ComputerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import nl.novi.risk.service.ComputerService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 @RestController
 public class ComputerController {

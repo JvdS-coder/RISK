@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class Storingen {
+public class Storing {
     @Id
     @GeneratedValue
 
@@ -20,12 +20,12 @@ public class Storingen {
     private String omschrijvingstoring;
     private String omschrijvingoplossing;
 
-    public Storingen() {
+    public Storing() {
 
     }
 
     // constructor
-    public Storingen(int stnr, int pcrndswnr, String prioriteit, Date datumstoring, Date datumstoplossing, String kostenstoring, String omschrijvingstoring, String omschrijvingoplossing) {
+    public Storing(int stnr, int pcrndswnr, String prioriteit, Date datumstoring, Date datumstoplossing, String kostenstoring, String omschrijvingstoring, String omschrijvingoplossing) {
         this.stnr = stnr;
         this.pcrndswnr = pcrndswnr;
         this.prioriteit = prioriteit;

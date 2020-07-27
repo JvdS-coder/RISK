@@ -63,7 +63,7 @@ class AddUserComponent extends Component{
                 <form>
                 <div className="form-group">
                     <label>User Name:</label>
-                    <input type="text" placeholder="username" name="username" className="form-control" value={this.state.username} onChange={this.onChange}/>
+                    <input type="text" name="merk" className="form-control" value={this.state.merk} onChange={this.onChange}/>
                 </div>
 
                 <div className="form-group">

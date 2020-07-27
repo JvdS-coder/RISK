@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ApiService from "../../service/ApiService";
 
-class EditComputerComponent extends Component {
+class EditComputer extends Component {
 
     constructor(props){
         super(props);
@@ -125,5 +125,5 @@ class EditComputerComponent extends Component {
     }
 }
 
-export default EditComputerComponent;
+export default EditComputer;
 

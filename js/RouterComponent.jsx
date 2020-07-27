@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import ListComputerComponent from "./component/computer/ListComputerComponent";
+import ListComputerComponent from "./component/computer/ListComputer";
 import AddComputerComponent from "./component/computer/AddComputerComponent";
-import EditComputerComponent from "./component/computer/EditComputerComponent";
+import EditComputerComponent from "./component/computer/EditComputer";
 import React from "react";
 
 const AppRouter = () => {

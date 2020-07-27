@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="css/risk.css">
     <link rel="stylesheet" type="text/css" href="css/nav_menu.css">
+    <script src="js/AddComputer.jsx"></script>
     <style>
         a {
             text-decoration: none;
@@ -100,7 +101,9 @@
               </tr>
               <tr>
                 <td><label for="Merk"><b>Merk</b></label></td>
-                <td><input type="text" name="merk" align=right id="merk" size="50" required></td>
+                <td><input type="text" name="merk" align=right id="merk" size="50" value={this.state.merk} onChange={this.onChange}/></td>
+
+                <!-- <td><input type="text" name="merk" align=right id="merk" size="50" required></td>  -->
                 <td><label for="Afdeling"><b>Afdeling</b></label></td>
                 <td><input type="text" name="afdeling"  id="afdeling" size="50" required></td>
               </tr>

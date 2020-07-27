@@ -26,7 +26,7 @@ public class LeverancierController {
     @GetMapping(value = "/api/leverancier/{id}")
     public Leverancier getLeverancierById(@PathVariable int id) {
         Optional<Leverancier> leverancier = leverancierRepository.findById(id);
-        if(leverancier.isPresent()) {
+        if (leverancier.isPresent()) {
             return leverancier.get();
         } else {
             return null;
