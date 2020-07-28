@@ -29,6 +29,12 @@ public class Computer {
     private String hd_2_type;
     private String ext_hd_capaciteit;
     private String ext_hd_type;
+    private boolean usba;
+    private boolean usbb;
+    private boolean usbc;
+    private boolean usbmini;
+    private boolean usbmicro;
+
 
     public Computer() {
 
@@ -58,6 +64,11 @@ public class Computer {
         this.hd_2_type = hd_2_type;
         this.ext_hd_capaciteit = ext_hd_capaciteit;
         this.ext_hd_type = ext_hd_type;
+        this.usba = usba;
+        this.usbb = usbb;
+        this.usbc = usbc;
+        this.usbmini = usbmini;
+        this.usbmicro = usbmicro;
     }
 
     // get methoden
@@ -78,6 +89,11 @@ public class Computer {
     public String getHd_2_type() { return hd_2_type; }
     public String getExt_hd_capaciteit() { return ext_hd_capaciteit; }
     public String getExt_hd_type() { return ext_hd_type; }
+    public boolean getUsba() {return usba; }
+    public boolean getUsbb() {return usbb; }
+    public boolean getUsbc() {return usbc; }
+    public boolean getUsbmini() {return usbmini; }
+    public boolean getUsbmicro() {return usbmicro; }
 
     // set methoden
     public void setPcnr(int pcnr) {
@@ -134,5 +150,10 @@ public class Computer {
     public void setExt_hd_type(String ext_hd_type) {
         this.ext_hd_type = ext_hd_type;
     }
+    public void setUsba(boolean usba) { this.usba = usba; }
+    public void setUsbb(boolean usbb) { this.usbb = usbb; }
+    public void setUsbc(boolean usbc) { this.usbc = usbc; }
+    public void setUsbmini(boolean usbmini) { this.usbmini = usbmini; }
+    public void setUsbmicro(boolean usbmicro) { this.usbmicro = usbmicro; }
 }
 

@@ -72,6 +72,11 @@ public class ComputerController {
         computer.setHd_2_type(computerDetails.getHd_2_type());
         computer.setExt_hd_capaciteit(computerDetails.getExt_hd_capaciteit());
         computer.setExt_hd_type(computerDetails.getExt_hd_type());
+        computer.setUsba(computerDetails.getUsba());
+        computer.setUsbb(computerDetails.getUsbb());
+        computer.setUsbc(computerDetails.getUsbc());
+        computer.setUsbmini(computerDetails.getUsbmini());
+        computer.setUsbmicro(computerDetails.getUsbmicro());
         final Computer updatedComputer = computerRepository.save(computer);
         return ResponseEntity.ok(updatedComputer);
     }
