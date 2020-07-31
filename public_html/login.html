@@ -9,7 +9,6 @@
     <meta name="Description" content="This index.html page is a webapplication for storing software, hardware and issue knowledgebase">
     <meta name="Copyright" content="Copyright 2020 by J. G. van der Slik">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/risk.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <style>
     a {
@@ -17,47 +16,45 @@
         }
 
 </style>
-    <script language="JavaScript" type="text/javascript">
-        function login(showhide){
-            if(showhide == "show"){
-                document.getElementById('popupbox').style.visibility="visible";
-            }else if(showhide == "hide"){
-                document.getElementById('popupbox').style.visibility="hidden";
-            }
-        }
-    </script>
-</head>    
+</head>
 <body>
-    <header>
+    <header widt="auto">
         <div><h1>Registratie Informatie Systemen & Knowledgebase</h1></div>
-        <p><a href="javascript:login('show');">login  </a>
-           <a href="javascript:login('hide');">  close</a></</p>
     </header>
 
     <section>
         <div>
 
-          <img class="w3-image" float="center" height="45%" src="img/portal_welcomescreen_medium.jpg" width="100%">
+          <!-- <img class="w3-image" float="center" height="45%" src="img/portal_welcomescreen_medium.jpg" width="100%"> -->
 
         </div>
     </section>
 
-    <div id="popupbox">
+    <div id="loginintranetsite">
     <form name="login" action="" method="post">
-        <center>Username:</center>
-        <center><input name="username" size="14" /></center>
-        <center>Password:</center>
-        <center><input name="password" type="password" size="14" /></center>
-        <center><input type="submit" name="submit" value="login" /></center>
+      <table>
+         <tr><h2><p>Login pagina</p></h2></tr>
+         <tr>
+            <td><label for="gebruikersnaam"><b>Gebruikersnaam</b></label></td>
+            <td><input type="text" name="gebruikersnaam" align=right id="gebruikersnaam" size="20" onChange=this.setState({merk:target.value}/></td>
+        </tr>
+        <tr>
+            <td><label for="wachtwoord"><b>Wachtwoord</b></label></td>
+            <td><input type="password" name="wachtwoord" align=right id="wachtwoord" size="20" onChange=this.setState({merk:target.value}/></td>
+        </tr>
+        <tr>
+            <td></td>
+                <td><input type="submit" name="cancel" value="Cancel" onclick="window.close('login.html')"/></td>
+                <td><input type="submit" name="submit" value="Login"/></td>
+                <td><input id="signup" type="button" value="Signup" onclick="window.open('signup.html','_self','toolbar=no,menubar=no,location=no,statusbar=no,scrollbar=no,width=620,height=310,left=400,top=225')"/></td>
+            </td>
+        </tr>
+      </table>
     </form>
-    <br />
-    <cente
     </div>
 
-
-
 </body>
-<footer>
+<footer width="auto">
     Copyright &copy 2020 by J. G. van der Slik, Maarheeze
 </footer>
 </html>
