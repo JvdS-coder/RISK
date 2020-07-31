@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+    Created on : 30-jun-2020, 12:02:22
+    Author     : Johan van der Slik
+-->
+<html xmlns:href="http://www.w3.org/1999/xhtml">
+<head>
+<title>RISK version 1.0</title>
+    <meta name="Description" content="This index.html page is a webapplication for storing software, hardware and issue knowledgebase">
+    <meta name="Copyright" content="Copyright 2020 by J. G. van der Slik">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/risk.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <style>
+    a {
+            text-decoration: none;
+        }
+
+</style>
+    <script language="JavaScript" type="text/javascript">
+        function login(showhide){
+            if(showhide == "show"){
+                document.getElementById('popupbox').style.visibility="visible";
+            }else if(showhide == "hide"){
+                document.getElementById('popupbox').style.visibility="hidden";
+            }
+        }
+    </script>
+</head>    
+<body>
+    <header>
+        <div><h1>Registratie Informatie Systemen & Knowledgebase</h1></div>
+        <p><a href="javascript:login('show');">login  </a>
+           <a href="javascript:login('hide');">  close</a></</p>
+    </header>
+
+    <section>
+        <div>
+
+          <img class="w3-image" float="center" height="45%" src="img/portal_welcomescreen_medium.jpg" width="100%">
+
+        </div>
+    </section>
+
+    <div id="popupbox">
+    <form name="login" action="" method="post">
+        <center>Username:</center>
+        <center><input name="username" size="14" /></center>
+        <center>Password:</center>
+        <center><input name="password" type="password" size="14" /></center>
+        <center><input type="submit" name="submit" value="login" /></center>
+    </form>
+    <br />
+    <cente
+    </div>
+
+
+
+</body>
+<footer>
+    Copyright &copy 2020 by J. G. van der Slik, Maarheeze
+</footer>
+</html>
