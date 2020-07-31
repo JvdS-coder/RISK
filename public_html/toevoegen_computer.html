@@ -15,7 +15,7 @@
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <!-- <script src="js/AddComputer.jsx"></script> -->
-    <script src="js/Cmputer.js"></script>
+    <script src="js/Computer.jsx"></script>
     <style>
         a {
             text-decoration: none;
@@ -103,7 +103,6 @@
               <tr>
                 <td><label for="Merk"><b>Merk</b></label></td>
                 <td><input type="text" name="merk" align=right id="merk" size="50" onChange=this.setState({merk:target.value} required/></td>
-
                 <!-- <td><input type="text" name="merk" align=right id="merk" size="50" required></td>  -->
                 <td><label for="Afdeling"><b>Afdeling</b></label></td>
                 <td><input type="text" name="afdeling" align=right id="afdeling" size="50" onChange=this.setState({afdeling:target.value} required></td>
@@ -146,15 +145,15 @@
                   <td><label for="Processor"><b>Processor</b></label></td>
                   <td><input type="text" name="processor" id="processor" size="20" onChange=this.setState({processor:target.value}></td>
                   <td><label for="type_hd_2"><b>Type Harddisk II*</b></label></td>
-                  <td><input type="text" name="type_hd_2" id="type_hd_2" onChange=this.setState({type_hd_2:target.value}></td>
-                      <datalist id="type_hd_2">
+                  <td><input list="type_hd_2" name="type_hd_2" id="type_hd_2" onChange=this.setState({type_hd_2:target.value}></td>
+                  <datalist id="type_hd_2">
                       <option value="SSD">
                       <option value="SATA II">
                       <option value="SATA III">
                       <option value="PATA">
-                      <option value="ULTRA">    
+                      <option value="ULTRA">
                       <option value="IDE">
-                    </datalist>
+                  </datalist>
               </tr>
               <tr>
                   <td><label for="Video_geheugen"><b>Video geheugen</b></label></td>
@@ -214,7 +213,7 @@
     </blockquote>
   </center>
    
-  <form action="/action_page.php" method="get">
+  <form action="/action_page.php" method="post">
       <center>
           <button type="submit" value="Submit"><b>Bewaar ingevoerde gegevens</b></button>
           <button type="reset" value="Reset"><b>Cancel</b></button>

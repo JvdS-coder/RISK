@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,8 +19,7 @@ public class ComputerController {
 
     @Autowired
     private ComputerService computerService;
-    private Object iMessageResolver;
-    public JpaRepository<T, Integer> computerRepository;
+    public ComputerRepository computerRepository;
 
     @GetMapping(value = "/api/computer", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Computer> getAllComputers() {

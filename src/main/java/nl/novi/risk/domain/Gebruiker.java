@@ -4,10 +4,11 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
-@Table(name = "Gebruiker")
+@Table(name = "gebruiker")
 public class Gebruiker {
 
     @Id
@@ -20,16 +21,17 @@ public class Gebruiker {
             strategy = "native"
     )
     @Column(columnDefinition = "serial")
-    private long id;
-    private String gebruikersnaam;
-    private String email;
+    private long nr_gebruiker;
+    private String naam_gebruiker;
+    private String email_gebruiker;
+    private String afdeling_gebruiker;
+    private LocalDate laatste_inlogdatum;
+
     private String password;
-    private String afdeling;
-    private String role;
 
     @ManyToMany
-    @JoinTable (name = "role",
-    joinColumns = @JoinColumn(name = gebruiker_id),
+    @JoinTable (name = "gebruiker_role",
+    joinColumns = @JoinColumn(name = "nr_gebruiker"),
     inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
 
@@ -37,37 +39,53 @@ public class Gebruiker {
 
     }
 
-    public Gebruiker(String gebruikersnaam, String email, String password, String afdeling, String role, Set<Role> roles) {
-        this.gebruikersnaam = gebruikersnaam;
-        this.email = email;
+    public Gebruiker(String naam_gebruiker, String email_gebruiker, String afdeling_gebruiker,
+                     LocalDate laatste_inlogdatum, String password) {
+        this.naam_gebruiker = naam_gebruiker;
+        this.email_gebruiker = email_gebruiker;
+        this.afdeling_gebruiker = afdeling_gebruiker;
+        this.laatste_inlogdatum = laatste_inlogdatum;
         this.password = password;
-        this.afdeling = afdeling;
-        this.role = role;
-        this.roles = roles;
     }
 
-    public long getId() {
-        return id;
+    public long getNr_gebruiker() {
+        return nr_gebruiker;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setNr_gebruiker(long nr_gebruiker) {
+        this.nr_gebruiker = nr_gebruiker;
     }
 
-    public String getGebruikersNaam() {
-        return gebruikersnaam;
+    public String getNaam_gebruiker() {
+        return naam_gebruiker;
     }
 
-    public void setNaam(String gebruikersnaam) {
-        this.gebruikersnaam = gebruikersnaam;
+    public void setNaam_gebruiker(String naam_gebruiker) {
+        this.naam_gebruiker = naam_gebruiker;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmail_gebruiker() {
+        return email_gebruiker;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmail_gebruiker(String email_gebruiker) {
+        this.email_gebruiker = email_gebruiker;
+    }
+
+    public String getAfdeling_gebruiker() {
+        return afdeling_gebruiker;
+    }
+
+    public void setAfdeling_gebruiker(String afdeling_gebruiker) {
+        this.afdeling_gebruiker = afdeling_gebruiker;
+    }
+
+    public LocalDate getLaatste_inlogdatum() {
+        return laatste_inlogdatum;
+    }
+
+    public void setLaatste_inlogdatum(LocalDate laatste_inlogdatum) {
+        this.laatste_inlogdatum = laatste_inlogdatum;
     }
 
     public String getPassword() {
@@ -78,19 +96,11 @@ public class Gebruiker {
         this.password = password;
     }
 
-    public String getAfdeling() {
-        return afdeling;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
-    public void setAfdeling(String afdeling) {
-        this.afdeling = afdeling;
-    }
-
-    public Set<Role> getRole() {
-        return role;
-    }
-
-    public void setRole(Set<Role> roles) {
-        this.role = role;
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }

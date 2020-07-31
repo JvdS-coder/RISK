@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import ApiService from "../../service/ApiService";
 
 class AddUserComponent extends Component{
