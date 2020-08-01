@@ -33,7 +33,7 @@
     <div id="signupintranetsite">
     <form name="signup" action="" method="post">
       <table>
-         <tr><h2><p>Registratie gebruikers</p></h2></tr>
+         <tr><h2>Registratie gebruikers</h2></tr>
          <tr>
             <td><label for="gebruikersnaam"><b>Gebruikersnaam</b></label></td>
             <td><input type="text" name="gebruikersnaam" align=right id="gebruikersnaam" size="20" onChange=this.setState({merk:target.value} required/></td>
@@ -51,10 +51,14 @@
             <td><input type="password" name="wachtwoord" align=right id="wachtwoord" size="20" onChange=this.setState({merk:target.value} required/></td>
          </tr>
          <tr>
+          <tr>
+              <td><label for="wachtwoord2"><b>Herhaal wachtwoord</b></label></td>
+              <td><input type="password" name="wachtwoord2" align=right id="wachtwoord2" size="20" onChange=this.setState({merk:target.value}/></td>
+          </tr>
             <td></td>
             <td><input type="submit" name="cancel" value="Cancel" onclick="window.close('signup.html')"></td>
-            <td><input type="submit" name="submit" value="Login" align="center" onclick="window.open('login.html','_parent','toolbar=no,menubar=no,location=no,statusbar=no,scrollbar=no,width=600,height=325,left=400,top=225')"/></td></td>
-            <td><input type="submit" name="signup" value="Signup" align="left" onclick="window.open('signup.html','_parent','toolbar=no,menubar=no,location=no,statusbar=no,scrollbar=no,width=600,height=325,left=400,top=225')"/></td>
+            <td><input type="submit" name="submit" value="Login" align="center" onclick="window.open('login.html','_parent','toolbar=no,menubar=no,location=no,statusbar=no,scrollbar=no,width=620,height=375,left=400,top=225')"/></td></td>
+            <td><input type="submit" name="signup" value="Signup" align="left" onclick="window.open('signup.html','_parent','toolbar=no,menubar=no,location=no,statusbar=no,scrollbar=no,width=620,height=375,left=400,top=225')"/></td>
          </tr>
       </table>
     </form>
@@ -62,6 +66,6 @@
 
 </body>
 <footer width="auto">
-    Copyright &copy 2020 by J. G. van der Slik, Maarheeze
+      Copyright &copy 2020 by J. G. van der Slik, Maarheeze
 </footer>
 </html>

@@ -115,14 +115,15 @@ form {
 }
 
 label {
-    font-family: verdana;
-    font-size: 12px;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    margin-left: 20px;
-    padding: 0% 12% 3% 3%;
+    display:block;
+    width:10050%;
+    margin-top:5px;
+    float:left;
+}
+input {
+    width:100%;
+    margin-top:5px;
+    float:left;
 }
 
 footer {
