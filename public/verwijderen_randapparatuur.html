@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--
+    Created on : 30-jun-2020, 12:02:22
+    Author     : Johan van der Slik
+-->
+<html class="supernova">
+<head>
+    <title>RISK version 1.0</title>
+    <meta name="Description"
+          content="This index.html page is a webapplication for storing software, hardware and issue knowledgebase">
+    <meta name="Copyright" content="Copyright 2020 by J. G. van der Slik">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/risk.css">
+    <link rel="stylesheet" type="text/css" href="css/nav_menu.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+<body>
+<header>
+    <a href='index.html'>
+        <div><h1>Registratie Informatie Systemen & Knowledgebase</h1></div>
+    </a>
+</header>
+    
+<nav>
+    <div>
+        <center>
+            <nav class="menu">
+		  <ol>
+		    <li class="menu-item">
+		      <a href="#0">Toevoegen</a>
+		      <ol class="sub-menu">
+			<li class="menu-item"><a href="toevoegen_computer.html">Computers</a></li>
+			<li class="menu-item"><a href="toevoegen_randapparatuur.html">Randapparatuur</a></li>
+                        <li class="menu-item"><a href="toevoegen_software.html">Software</a></li>
+                        <li class="menu-item"><a href="toevoegen_leverancier.html">Leverancier</a></li>
+                        <li class="menu-item"><a href="toevoegen_storingen.html">Storingen</a></li>
+                        <li class="menu-item"><a href="toevoegen_knowledgebase.html">Knowledgebase</a></li>
+		      </ol>
+		    </li>
+		    <li class="menu-item">
+		      <a href="#0">Raadplegen</a>
+		      <ol class="sub-menu">
+			<li class="menu-item"><a href="raadplegen_computer.html">Computers</a></li>
+			<li class="menu-item"><a href="raadplegen_randapparatuur.html">Randapparatuur</a></li>
+                        <li class="menu-item"><a href="raadplegen_software.html">Software</a></li>
+                        <li class="menu-item"><a href="raadplegen_leverancier.html">Leverancier</a></li>
+                        <li class="menu-item"><a href="raadplegen_storingen.html">Storingen</a></li>
+                        <li class="menu-item"><a href="raadplegen_knowledgebase.html">Knowledgebase</a></li>
+		    </ol>
+                    </li>
+		    <li class="menu-item">
+		      <a href="#0">Wijzigen</a>
+		      <ol class="sub-menu">
+			<li class="menu-item"><a href="wijzigen_computer.html">Computers</a></li>
+			<li class="menu-item"><a href="wijzigen_randapparatuur.html">Randapparatuur</a></li>
+                        <li class="menu-item"><a href="wijzigen_software.html">Software</a></li>
+                        <li class="menu-item"><a href="wijzigen_leverancier.html">Leverancier</a></li>
+                        <li class="menu-item"><a href="wijzigen_storingen.html">Storingen</a></li>
+                        <li class="menu-item"><a href="wijzigen_knowledgebase.html">Knowledgebase</a></li>
+		      </ol>
+                    </li>
+		    <li class="menu-item">
+		       <a href="#0">Verwijderen</a>
+		      <ol class="sub-menu">
+			<li class="menu-item"><a href="verwijderen_computer.html">Computers</a></li>
+			<!-- <li class="menu-item"><a href="verwijderen_randapparatuur.html">Randapparatuur</a></li> -->
+                        <li class="menu-item"><a href="verwijderen_software.html">Software</a></li>
+                        <li class="menu-item"><a href="verwijderen_leverancier.html">Leverancier</a></li>
+                        <li class="menu-item"><a href="verwijderen_storingen.html">Storingen</a></li>
+                        <li class="menu-item"><a href="verwijderen_knowledgebase.html">Knowledgebase</a></li>
+	          </ol>
+                    </li>
+		    <li class="menu-item"><a href="overzichten.html">Statistics</a></li>
+		    <li class="menu-item"><a href="over_RISK.html">Over RISK</a></li>
+		  </ol>
+	    </nav>
+        </center>
+    </div>
+</nav>
+<section>
+
+  <center>
+    <blockquote>
+      <div class="container">
+        <form action="action_page.php">
+          <h1>Verwijderen gegevens randapparatuur</h1>
+          <center>
+          <table>
+              <tr>
+                  <td><label for="Pcnr"><b>RA-Nummer</b></label></td>
+                  <td><input type="text" name="tanr" align=right id="ranr" size="10" required></td>
+                  <td><button type="submit" value="Submit"><b>Zoek recordgegevens Randapparatuur</b></button></td>
+              </tr>
+          </table>
+          <hr>
+          <table>  
+              <tr>
+                <td><label for="soort"><b>Soort</b></label></td>
+                <td><input type="text" name="soort" align=left id="merk" size="60" readonly></td>
+                <td><label for="Beeldschem"><b>Beeldscherm</b></label></td>
+                <td><input type="text" name="merk" align=left id="beeldscherm" size="30" readonly></td>
+              </tr>
+              <tr>
+                <td><label for="Merk"><b>Merk</b></label></td>
+                <td><input type="text" name="merk" align=left id="merk" size="60" readonly></td>
+                <td><label for="Formaatbeeldscherm"><b>Formaat beeldscherm</b></label></td>
+                <td><input type="text" name="Formaatbeeldscherm"  align=left id="Formaatbeeldscherm" size="30" readonly></td>
+              </tr>
+              <tr>
+                 <td><label for="Type"><b>Type</b></label></td>
+                 <td><input type="text" name="type" align=left id="type" size="50" required></td>
+                 <td><label for="Beeldschemaansluitingen"><b>Scherm aansluitingen</b></label></td>
+                 <td><input type="text" name="beelschermaansluitingen" align=left id="beeldschermaansluitingen" size="30" readonly></td>
+              </tr>
+              <tr></tr>
+                <td><label for="Videokaart"><b>Videokaart</b></label></td>
+                <td><input type="text" name="videokaart" align=left id="videokaart" size="30" readonly></td>
+                <td><label for="Videogeheugen"><b>Videogeheugen</b></label></td>
+                <td><input type="text" name="Videogeheugen" align=left id="Videogeugen" size="30" readonly></td>
+              </tr>
+          </table>
+          <hr>
+          <table>
+              <tr>
+                  <td><label for="<Merkprinter"><b>Merk printer</b></label></td>
+                  <td><input type="text" name="merkprinter" align=left id="merkprinter"size="30" readonly></td> 
+                  <td><label for="Levnr"><b>Leverancier nummer</b></label></td>
+                  <td><input type="text" name="levnr" align=left id="levnr" size="10" readonly></td>
+              </tr>
+              <tr>
+                  <td><label for="Typeprinter"><b>Type printer</b></label></td>
+                  <td><input type="text" name="Typeprinter"  align=left id="typeprinter" size="30" readonly></td>
+                  <td><label for="Onderhoudscontract"><b>Onderhoudscontract</b></label></td>
+                  <td><input type="text" name="onderhoudscontract" align=left id="onderhoudscontract" size="20" readonly></td>
+              </tr>
+              <tr>
+                  <td><label for="Aankoopdatum"><b>Aankoopdatum</b></label></td>
+                  <td><input type="date" name="aankoopdatum" align=left id="aankoopdatum" readonly></td>
+                  <td><label for="Locatie"><b>Locatie</b></label></td>
+                  <td><input type="text" name="locatie" id="locatie" size="50" readonly></td>
+              </tr>
+              <tr>
+                  <td><label for="Afloopdatum"><b>Afloopdatum</b></label></td>
+                  <td><input type="date" name="afloopdatum" align=left id="afloopdatum" readonly></td>
+                  <td><label for="Afdeling"><b>Afdeling</b></label></td>
+                  <td><input type="text" name="afdeling"  id="afdeling" size="50" readonly></td>
+              </tr>
+          </table>
+     
+          </center>
+        </form>
+      </div>
+    </blockquote>
+  </center>
+   
+  <form action="/action_page.php" method="get">
+      <center>
+          <button type="submit" value="Submit"><b>Verwijder getoonde recordgegevens</b></button>
+          <button type="reset" value="Reset"><b>Cancel</b></button></b></button>
+      </center>
+  </form>
+</section>
+        
+    
+    
+    <!-- <label for="Typepsw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <hr>
+
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+  -->
+
+
+<footer>
+    Copyright &copy 2020 by J. G. van der Slik, Maarheeze
+</footer>
+</body>
+</html>
+

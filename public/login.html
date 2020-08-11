@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+    Created on : 30-jun-2020, 12:02:22
+    Author     : Johan van der Slik
+-->
+<html xmlns:href="http://www.w3.org/1999/xhtml">
+<head>
+<title>RISK version 1.0</title>
+    <meta name="Description" content="This index.html page is a webapplication for storing software, hardware and issue knowledgebase">
+    <meta name="Copyright" content="Copyright 2020 by J. G. van der Slik">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <style>
+    a {
+            text-decoration: none;
+        }
+
+</style>
+</head>
+<body>
+    <header widt="auto">
+        <div><h1>Registratie Informatie Systemen & Knowledgebase</h1></div>
+    </header>
+
+    <section>
+        <div>
+
+          <!-- <img class="w3-image" float="center" height="45%" src="img/portal_welcomescreen_medium.jpg" width="100%"> -->
+
+        </div>
+    </section>
+    <br>
+    <br>
+    <div classname="Login">
+        <form name="login" action="" method="post" align="center">
+          <table>
+             <tr><h2>Login pagina</h2></tr>
+             <tr>
+                <td><label for="gebruikersnaam"><b>Gebruikersnaam</b></label></td>
+                <td><input type="text" name="gebruikersnaam" align=right id="gebruikersnaam" size="20" /></td>
+                <!-- <td><input type="text" name="gebruikersnaam" align=right id="gebruikersnaam" size="20" value={gebruikersnaam}
+                           onChange={e => setGebruikersnaam(e.target.value)} /></td> -->
+            </tr>
+            <tr>
+                <td><label for="wachtwoord"><b>Wachtwoord</b></label></td>
+                <td><input type="password" name="wachtwoord" align=right id="wachtwoord" size="20" /></td>
+                <!-- <td><input type="password" name="wachtwoord" align=right id="wachtwoord" size="20" value={wachtwoord}
+                           onChange={e => setWachtwoord(e.target.value)} /></td> -->
+            </tr>
+            <tr>
+                <td>
+                    <td><input type="submit" name="cancel" value="Cancel" onclick="window.close('login.html')"/></td>
+                    <td><input type="submit" name="submit" value="Login"/></td>
+                    <td><input id="signup" type="button" value="Signup" onclick="window.open('signup.html','_self','toolbar=no,menubar=no,location=no,statusbar=no,scrollbar=no,width=600,height=420,left=420,top=275')"/></td>
+                </td>
+            </tr>
+            </table>
+        </form>
+    </div>
+
+    <script
+            src="https://unpkg.com/react@16/umd/react.production.min.js"
+            crossorigin
+    ></script>
+    <script
+            src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+            crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel" src="WelcomeBack.js"></script>
+    <script type="text/babel" src="CoolButton.js"></script>
+
+    <script type="text/babel">
+        ReactDOM.render(<WelcomeBack />, document.querySelector(".welcome-back"));
+    </script>
+
+    <br>
+    <br>
+</body>
+<footer width="auto">
+     Copyright &copy 2020 by J. G. van der Slik, Maarheeze
+</footer>
+</html>
